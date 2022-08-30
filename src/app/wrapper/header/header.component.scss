@@ -1,0 +1,13 @@
+mat-toolbar {
+  background-color: rgb(38, 38, 130);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h3{
+    font-weight: 200;
+    span{
+      font-weight: 400;
+    }
+  }
+}
