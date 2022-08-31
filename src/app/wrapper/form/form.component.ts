@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FacadeTableService } from '../abstract/facade-table.service';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private facadeTableService: FacadeTableService) { }
+  
   ngOnInit(): void {
+    
   }
 
 }

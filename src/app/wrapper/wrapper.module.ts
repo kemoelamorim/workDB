@@ -7,8 +7,9 @@ import { FooterComponent } from './footer/footer.component';
 import { TableComponent } from './table/table.component';
 import { WrapperRoutingModule } from './wrapper-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
-
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   imports: [
     CommonModule,
     WrapperRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+    FormsModule,
+    MatTableModule
   ]
 })
 export class WrapperModule { }
