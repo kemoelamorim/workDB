@@ -13,9 +13,15 @@ export class TableComponent implements OnInit {
   constructor(private facadeTableService: FacadeTableService) { }
 
   ngOnInit(): void {
-    this.dataSource = this.facadeTableService.getFacadeTable();
-    this.displayNameColumns = Object.keys(this.dataSource[0]);
-    console.log(this.displayNameColumns)
+    this.facadeTableService.getFacadeTable().subscribe({
+      next: (dados: IPessoa[]) => {
+				this.dataSource = dados;
+        this.displayNameColumns = Object.keys(this.dataSource[0]);
+			}
+    });
+  }
+  onDestroy(){
+    this.dataSource = []
   }
 
 }
