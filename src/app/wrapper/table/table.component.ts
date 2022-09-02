@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FacadeTableService } from '../abstract/facade-table.service';
-import { IPessoa } from '../model/pessoa';
+import { Pessoa } from '../model/Pessoa';
 
 @Component({
   selector: 'app-table',
@@ -8,13 +8,13 @@ import { IPessoa } from '../model/pessoa';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  dataSource: IPessoa[] = [];
+  dataSource: Pessoa[] = [];
   displayNameColumns: string[] = [];
   constructor(private facadeTableService: FacadeTableService) { }
 
   ngOnInit(): void {
     this.facadeTableService.getFacadeTable().subscribe({
-      next: (dados: IPessoa[]) => {
+      next: (dados: Pessoa[]) => {
 				this.dataSource = dados;
         this.displayNameColumns = Object.keys(this.dataSource[0]);
 			}

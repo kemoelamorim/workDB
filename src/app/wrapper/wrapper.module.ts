@@ -8,7 +8,7 @@ import { TableComponent } from './table/table.component';
 import { WrapperRoutingModule } from './wrapper-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -30,7 +30,8 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     MatTableModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule
   ]
 })
 export class WrapperModule { }

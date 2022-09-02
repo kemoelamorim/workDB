@@ -4,27 +4,27 @@
     <p>Adicione as suas informações no formulário abaixo</p>
   </div>
   <mat-card>
-    <form>
+    <form [formGroup]="formGroup">
       <div class="form-row">
         <div class="col">
           <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome">
+          <input type="text" formControlName="nome" class="form-control" id="nome" required>
         </div>
         <div class="col">
           <label for="sobrenome">Sobrenome</label>
-          <input type="text" class="form-control" id="sobrenome">
+          <input type="text" formControlName="sobrenome" class="form-control" id="sobrenome" required>
         </div>
       </div>
       <div class="form-group mt-3">
         <label for="altura">Altura</label>
-        <input type="text" class="form-control" id="altura">
+        <input type="number" formControlName="altura" class="form-control" id="altura" required>
       </div>
       <div class="form-group">
         <label for="data-nascimento">Data Nascimento</label>
-        <input type="date" class="form-control" id="data-nascimento" >
+        <input type="date" formControlName="nascimento" class="form-control" id="data-nascimento" required>
       </div>
       <div class="d-flex flex-row-reverse">
-        <button class="btn btn-success">Cadastar</button>
+        <button [disabled]="!formGroup.valid" (click)="cadastrar()" class="btn btn-success">Cadastar</button>
       </div>
     </form>
   </mat-card>
