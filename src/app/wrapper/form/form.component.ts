@@ -1,23 +1,22 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FacadeTableService } from '../abstract/facade-table.service';
+import { AtualizaTabelaService } from '../core/atualiza-tabela.service';
 import { Cadastro } from '../model/Cadastro';
-import { Pessoa } from '../model/Pessoa';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit, OnChanges {
+export class FormComponent implements OnInit {
+
   formGroup!: FormGroup;
   constructor(
     private facadeTableService: FacadeTableService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private atualizaTabela: AtualizaTabelaService
     ) { }
-
-  ngOnChanges(): void {
-  }
   
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
@@ -32,14 +31,14 @@ export class FormComponent implements OnInit, OnChanges {
     if(this.formGroup.valid){
       const cadastro = new Cadastro(this.formGroup.value);
       this.facadeTableService.postFacadeTable(cadastro).subscribe({
-        next: () => {
-          this.ngOnChanges()
+        next: (res) => {
+          this.atualizaTabela.setObservable(res)
         },
         error: (error: any) => {
             console.error('ERRO: ', error);
         }
-    })
-      //this.formGroup.reset();
+      })
+      this.formGroup.reset();
     }
   }
 

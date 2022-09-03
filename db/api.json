@@ -2,43 +2,27 @@
   "dados": [
     {
       "id": 1,
-      "nome": "kemoel",
-      "sobrenome": "miranda",
-      "altura": 1.75,
-      "nascimento": "1992-12-01",
+      "nome": "Kemoel",
+      "sobrenome": "Miranda",
+      "altura": 1.89,
+      "nascimento": "19/5/1994",
       "idade": 28
     },
     {
-      "id": 2,
-      "nome": "thamiris",
-      "sobrenome": "ruany",
-      "altura": 1.75,
-      "nascimento": "1993-07-19",
-      "idade": 29
-    },
-    {
-      "id": 3,
-      "nome": "maria",
-      "sobrenome": "franco",
-      "altura": 1.75,
-      "nascimento": "1994-10-20",
-      "idade": 30
-    },
-    {
       "nome": "João Pedro",
-      "sobrenome": "Souza",
-      "altura": 12,
-      "nascimento": "1212-12-12",
-      "idade": 809,
-      "id": 4
+      "sobrenome": "Lima",
+      "altura": 1.76,
+      "nascimento": "15/7/1993",
+      "idade": 29,
+      "id": 2
     },
     {
-      "nome": "Muka",
-      "sobrenome": "2",
-      "altura": 12,
-      "nascimento": "1212-12-12",
-      "idade": 809,
-      "id": 5
+      "nome": "Leandro",
+      "sobrenome": "Santos",
+      "altura": 1.78,
+      "nascimento": "19/4/1992",
+      "idade": 30,
+      "id": 3
     }
   ]
 }

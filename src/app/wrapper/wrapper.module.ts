@@ -20,7 +20,7 @@ import { MatCardModule } from '@angular/material/card';
     FormComponent,
     HeaderComponent,
     FooterComponent,
-    TableComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
