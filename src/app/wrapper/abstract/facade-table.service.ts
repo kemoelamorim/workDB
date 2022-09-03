@@ -17,5 +17,8 @@ export class FacadeTableService {
   postFacadeTable(dados: Cadastro): Observable<IPessoa>{
     return this.tableService.postDadosTabela(dados)
   }
+  deleteFacadeRow(id: number): Observable<IPessoa>{
+    return this.tableService.deleteRowTabela(id)
+  }
 
 }

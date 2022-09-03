@@ -4,25 +4,9 @@
       "id": 1,
       "nome": "Kemoel",
       "sobrenome": "Miranda",
-      "altura": 1.89,
-      "nascimento": "19/5/1994",
+      "altura": 1.79,
+      "nascimento": "19/05/1994",
       "idade": 28
-    },
-    {
-      "nome": "João Pedro",
-      "sobrenome": "Lima",
-      "altura": 1.76,
-      "nascimento": "15/7/1993",
-      "idade": 29,
-      "id": 2
-    },
-    {
-      "nome": "Leandro",
-      "sobrenome": "Santos",
-      "altura": 1.78,
-      "nascimento": "19/4/1992",
-      "idade": 30,
-      "id": 3
     }
   ]
 }

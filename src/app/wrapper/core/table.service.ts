@@ -17,4 +17,7 @@ export class TableService {
   postDadosTabela(dados: Cadastro): Observable<IPessoa>{
     return this.httpClient.post<IPessoa>("http://localhost:3000/dados", dados)
   }
+  deleteRowTabela(id: number): Observable<IPessoa>{
+    return this.httpClient.delete<IPessoa>(`http://localhost:3000/dados/${id}`)
+  }
 }
